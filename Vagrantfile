@@ -17,4 +17,5 @@ Vagrant.configure("2") do |config|
 
   # Installation automatique de Docker
   config.vm.provision "shell", path: "install-docker.sh"
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 end
